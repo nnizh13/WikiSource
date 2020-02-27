@@ -43,7 +43,7 @@ setnames(data, c("Perplexity", "Year", "Language"))
 
 
 # Save data
-fwrite(data, "ppl_ngram_year.csv", )
+fwrite(data, "ppl_ngram_year.csv")
 
 # Remove some outliers
 ru_mean = mean(data[Language=="Russian", Perplexity]) # 552.4155
