@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "/Users/nikanizharadze/anaconda3/envs/WikiSource/bin/python"
+    "python.pythonPath": "/Users/xy/.pyenv/shims/python",
+    "python.linting.pylintEnabled": false,
+    "python.linting.mypyEnabled": true,
+    "python.linting.enabled": true
 }
