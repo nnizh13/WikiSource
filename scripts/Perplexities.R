@@ -65,3 +65,21 @@ p <- ggplot(data1, aes(x=Year, y=Perplexity))+
 pdf("ppl(ngram)_year_pruned.pdf", 6, 5)
 plot(p)
 dev.off()
+
+
+# Use linear models to check if the temporal patterns are significant
+data = fread("ppl_ngram_year.csv")
+
+m1 = lm(Perplexity ~ Year, data[Language=="Russian"])
+summary(m1)
+# Estimate Std. Error t value Pr(>|t|)
+# (Intercept) -6953.970   2673.011  -2.602  0.01061 *
+# Year            4.007      1.427   2.809  0.00593 **
+# Adjusted R-squared:  0.06048
+
+m2 = lm(Perplexity ~ Year, data[Language=="Italian"])
+summary(m2)
+# Estimate Std. Error t value Pr(>|t|)
+# (Intercept) -7368.8501  1262.8798  -5.835 5.81e-08 ***
+# Year            4.4493     0.6738   6.603 1.60e-09 ***
+# Adjusted R-squared:  0.2829
