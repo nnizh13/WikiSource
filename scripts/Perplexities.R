@@ -83,3 +83,31 @@ summary(m2)
 # (Intercept) -7368.8501  1262.8798  -5.835 5.81e-08 ***
 # Year            4.4493     0.6738   6.603 1.60e-09 ***
 # Adjusted R-squared:  0.2829
+
+m3 = lm(Perplexity ~ Year, data[Language=="English"])
+summary(m3)
+# Estimate Std. Error t value Pr(>|t|)
+# (Intercept) -5413.2778   737.5397  -7.340 4.22e-11 ***
+# Year            3.2610     0.3934   8.289 3.44e-13 ***
+# Adjusted R-squared: 0.3832
+
+m4 = lm(Perplexity ~ Year, data[Language=="French"])
+summary(m4)
+# Estimate Std. Error t value Pr(>|t|)
+# (Intercept) -3690.7814   442.5597   -8.34 2.65e-13 ***
+# Year            2.4189     0.2361   10.25  < 2e-16 ***
+# Adjusted R-squared:  0.4883
+
+m5 = lm(Perplexity ~ Year, data[Language=="Spanish"])
+summary(m5)
+# Estimate Std. Error t value Pr(>|t|)
+# (Intercept) 2167.7434   705.0130   3.075  0.00267 **
+# Year          -0.9621     0.3761  -2.558  0.01190 *
+# Adjusted R-squared:  0.04842
+
+m6 = lm(Perplexity ~ Year, data[Language=="Chinese"])
+summary(m6)
+# Estimate Std. Error t value Pr(>|t|)
+# (Intercept) -1219.407    710.931  -1.715   0.0901 .
+# Year            0.685      0.382   1.793   0.0766 .
+# Adjusted R-squared:  0.02632
